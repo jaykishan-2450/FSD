@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <a href="https://abes.ac.in/">Abes Engineeing College</a><br>
+    <button onclick="display()">Change Link</button><hr>
+    <button onclick="newdiv()">add new heading</button><hr>
+   
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        
+        let newdiv=()=>{
+            let h=prompt("enter the heading");
+            const body=document.querySelector('body');
+            const h1=document.createElement('h1');
+            h1.textContent=h;
+            body.appendChild(h1);
+
+        }
+        let b=1;
+        let a=document.querySelector('a');
+        let display=()=>{
+            if(b){
+                a.setAttribute('href',"https://aktu.ac.in/");
+            a.innerText="Aktu Website";
+            b=0;
+            }
+            else{
+                a.setAttribute('href',"https://abes.ac.in/");
+            a.innerText="Abes Website";
+            b=1;
+            }
+        }
+
+
+        // let p1=document.querySelectorAll('p');
+        // let display=()=>{
+        //     p1[0].innerHTML="updated";
+        //     p1[0].style.backgroundColor='red';
+        //     p1[1].innerHTML="updated";
+        //     p1[1].style.backgroundColor='yellow';
+        // }
+       
+    </script>
+</body>
+</html>
