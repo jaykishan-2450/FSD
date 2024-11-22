@@ -1,0 +1,23 @@
+.count-btn button{
+
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px;
+  width: 10vw;
+}
+.count-body{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.count-app{
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+
+}
+.count-app h1{
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 5px;
+}
