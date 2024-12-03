@@ -1,0 +1,38 @@
+.count-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    border: 10px solid black;
+    padding: 100px;
+  }
+  .count-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .count-disp {
+    width: 80%;
+    font-size: 50px;
+    background-color: grey;
+    color: black;
+    padding: 30px;
+    border: 10px solid white;
+    border-radius: 10px;
+  }
+  
+  .count-btn {
+    background-color: green;
+    font-size: 30px;
+    color: white;
+    width: 70%;
+    height: 80px;
+    border: 10px solid white;
+  }
+  .count-btn1 {
+    background-color: red;
+    font-size: 30px;
+    color: white;
+    width: 70%;
+    height: 80px;
+    border: 10px solid white;
+  }
