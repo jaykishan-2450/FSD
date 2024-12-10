@@ -3,15 +3,17 @@ import { Link, Outlet } from 'react-router-dom'
 
 const MainLayout = () => {
     return (
-        <div>
+        <div style={{ "margin": "30px" }}>
+            {/* <h1>sghvdcewgh</h1> */}
             <nav>
-                <ul>
+                <ul style={{ "display": "flex",   "listStyle": "none" }}>
                     <li>
-                        <Link to="/login">Login</Link>
+                        <Link style={{ "textDecoration": "none", "color": "brown", "border": "1px solid black", "padding": "5px", "borderRadius": "10%","margin-right":"10px" }} to="/login">Login</Link>
                     </li>
                     <li>
-                        <Link to="/register">Register</Link>
+                        <Link style={{ "textDecoration": "none", "color": "brown", "border": "1px solid black", "padding": "5px", "borderRadius": "10%","margin-right":"10px" }} to="/register">Register</Link>
                     </li>
+                    
                 </ul>
             </nav>
             <Outlet />

@@ -1,37 +1,40 @@
 import React, { useState } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from 'react-router-dom';
 
 
-const Register = ({regData}) => {
-    const [name,setName]=useState();
-    const [email,setEmail]=useState();
-    const [password,setPassword]=useState();
-    const data={name,email,password};
-const handleRegister=(e)=>{
-    e.preventDefault();
-    regData(data);
-    
-}
+const Register = ({ regData }) => {
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const navigate=useNavigate();
+    const data = { name, email, password };
+    const handleRegister = (e) => {
+        e.preventDefault();
+        alert("success");
+        regData(data);
+        navigate("/login");
+
+    }
 
     return (
-        <div>
+        <div style={{ "width": "40vw" }}>
+            
             <form >
-            <div className="form-group">
+                <div className="form-group">
                     <label htmlFor="name">Name:</label>
-                    <input type="text" className="form-control" id="name" onChange={(e)=>setName(e.target.value)}/>
+                    <input type="text" className="form-control" id="name" onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Email address:</label>
-                    <input type="email" className="form-control" id="email" onChange={(e)=>setEmail(e.target.value)}/>
+                    <input type="email" className="form-control" id="email" onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="pwd">Password:</label>
-                    <input type="password" className="form-control" id="pwd" onChange={(e)=>setPassword(e.target.value)}/>
+                    <input type="password" className="form-control" id="pwd" onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                <div className="checkbox">
-                    <label><input type="checkbox"/> Remember me</label>
-                </div>
-                <button  className="btn btn-default" onClick={handleRegister}>Submit</button>
+
+                <button style={{ "border": "1px solid black", "margin-top": "10px" }} className="btn btn-default" onClick={handleRegister}>Submit</button>
             </form>
 
         </div>

@@ -14,10 +14,10 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
-            <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login regLogin={data} />} />
             <Route path="/register" element={<Register regData={setData} />} />
           </Route>
-          <Route path="/dashboard" element={<DashBoard/>}/>
+          <Route path="/dashboard" element={<DashBoard regDash={data}/>}/>
           <Route path="/logout" element={<Logout/>}/>
         </Routes>
       </BrowserRouter>
@@ -25,5 +25,6 @@ const App = () => {
     </div>
   )
 }
+
 
 export default App
