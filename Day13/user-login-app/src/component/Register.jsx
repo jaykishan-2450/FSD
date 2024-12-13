@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from 'react-router-dom';
+import "./MainLayout.css";
 
 
 const Register = ({ regData }) => {
@@ -18,7 +19,9 @@ const Register = ({ regData }) => {
     }
 
     return (
+        <div className="main">
         <div style={{ "width": "40vw" }}>
+            <h2 style={{"margin-bottom":"15px","color":"brown"}}>Register:</h2>
             
             <form >
                 <div className="form-group">
@@ -34,9 +37,10 @@ const Register = ({ regData }) => {
                     <input type="password" className="form-control" id="pwd" onChange={(e) => setPassword(e.target.value)} />
                 </div>
 
-                <button style={{ "border": "1px solid black", "margin-top": "10px" }} className="btn btn-default" onClick={handleRegister}>Submit</button>
+                <button style={{ "border": "1px", "margin-top": "10px","backgroundColor":"blue","color":"white" }} className="btn btn-default" onClick={handleRegister}>Submit</button>
             </form>
 
+        </div>
         </div>
     )
 }

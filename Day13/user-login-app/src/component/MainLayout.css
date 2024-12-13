@@ -1,0 +1,8 @@
+.main{
+    height: 60vh;
+    width:50vw;
+    margin: auto;
+    padding:5vw;
+    border:1px solid brown;
+    border-radius:10px;
+}

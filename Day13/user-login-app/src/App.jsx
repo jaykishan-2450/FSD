@@ -18,7 +18,7 @@ const App = () => {
             <Route path="/register" element={<Register regData={setData} />} />
           </Route>
           <Route path="/dashboard" element={<DashBoard regDash={data}/>}/>
-          <Route path="/logout" element={<Logout/>}/>
+          <Route path="/logout" element={<Logout regLog={setData}/>}/>
         </Routes>
       </BrowserRouter>
 
